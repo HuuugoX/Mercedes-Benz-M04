@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: black;
+}
+
+@media screen and (max-width: 768px) {
+    /* Estilos específicos para pantallas más pequeñas (ej. móviles) */
+    .hero nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-links, .second-nav {
+        display: none;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-form {
+        text-align: center;
+    }
+
+    .form input, .form textarea {
+        width: 100%;
+    }
+}
+
+.hero{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(img/Hero.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.hero nav{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.hero .logo img{
+    width: 75px;
+    position: absolute;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+}
+
+.hero .left-links{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    width: 30%;
+    height: fit-content;
+    margin-top: 40px;
+}
+
+.left-links a{
+    text-decoration: none;
+    color: #acacac;
+}
+
+.langs{
+    display: flex;
+    list-style: none;
+}
+
+.hero .right-links{
+    display: flex;
+    margin-top: 40px;
+    width: 22%;
+    justify-content: space-between;
+    font-size: 1.2em;
+    list-style: none;
+}
+
+.right-links a{
+    text-decoration: none;
+    color: #acacac;
+}
+
+.right-links a ion-icon{
+    font-size: 20px;
+}
+.right-links input[type="text"]{
+    color: #acacac;
+    border: none;
+    background-color: transparent;
+}
+
+.right-links input[type="text"]::placeholder{
+    font-size: 1.2em;
+    color: #acacac;
+}
+
+.second-nav{
+    display: flex;
+    width: 70%;
+    list-style: none;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.second-nav li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+.second-nav li:hover, .second-nav li a:hover{
+    color: rgb(3, 185, 85);
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.header{
+    position: absolute;
+    top: 50%;
+    font-size: 5em;
+    color: white;
+    font-family: sans-serif;
+}
+
+.form {
+    width: 100%;
+    color: white;
+    border-radius: 10px;
+}
+
+.form p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(3, 185, 85);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.form input[type="submit"],
+.form input[type="reset"] {
+    background-color: rgb(3, 185, 85);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.form input::placeholder{
+    color: black;
+}
+
+.form input[type="submit"]:hover,
+.form input[type="reset"]:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+
+.contact{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+    margin-top: 70px;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 40px;
+    border-radius: 40px;
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+.contact h2{
+    margin-bottom: 15px;
+    font-size: 35px;
+    color: black;
+}
+.contact img{
+    width: 500px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.contact img:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.contact a{
+    padding-top: 10px;
+    font-size: 1.2em;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: black;
+    font-weight: 700;
+}
+
+.contact a ion-icon{
+    color: rgb(3, 185, 85);
+    margin-right: 10px;
+}
+
+.down{
+    color: white;
+    font-size: 7em;
+    position: absolute;
+    bottom: 0;
+    animation: down 1s infinite;
+}
+
+@keyframes down{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(10%);
+    }
+}
+
+/* ------------------------------------------- */  
+
+.second{
+    position: relative;
+    height: 80%;
+    width: 100vw;
+    
+    color: white;
+    font-size: 1.7em;
+}
+
+.video{
+    height: 100%;
+    max-height: fit-content;
+    min-height: fit-content;
+    transform: translateX(25%);
+}
+
+.second video{
+    max-width: fit-content;
+    width: 100%;
+}
+
+.second h3{
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    font-weight: 200;
+}
+
+.second h1{
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    margin-top: 40px;
+    font-size: 2.5em;
+}
+
+.second button{
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    border: none;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 30px;
+    background: white;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.second button:hover{
+    background-color: rgb(3, 185, 85);
+    color: white;
+}
+
+/* ------------------------------------------- */ 
+
+.third{
+    display: flex;
+    height: 30vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.third h1{
+    text-align: center;
+    font-size: 3em;
+    margin-top: 10px;
+    color: white;
+}
+
+.social{
+    display: flex;
+    list-style: none;
+    width: 90%;
+    font-size: 3em;
+    justify-content: space-evenly;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+.social a{
+    color: white;
+}
+
+.social li{
+    transition: 0.5s;
+}
+
+.social li:hover, .social li a:hover{
+    transform: scale(1.4);
+    color: rgb(3, 185, 85);
+}
+.negro p{
+    color: black;
+}
